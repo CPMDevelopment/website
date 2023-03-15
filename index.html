@@ -8,6 +8,25 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .image {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
 </style>
   <div style="text-align: left;"><img src="Global_TL_LOGO_TP_White.png" width="175" alt="My Image" /></div>      
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -23,5 +42,11 @@ body {
   </style>
 </head>
 <body>
+  <div class="container">
+      <div class="image">
+        <img src="Global_TL_LOGO_TP_White.png">
+        <div class="box"></div>
+      </div>
+    </div>
 </body>
 </html>
