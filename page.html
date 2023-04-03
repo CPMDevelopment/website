@@ -7,19 +7,21 @@ body {
     background-image: url(img_bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
     background-position: 50%;
 }
+  
 </style>
   <div style="text-align: left;">
   <img src="Global_TL_LOGO_TP_White.png" width="175" alt="My Image" />
-  </div> 
+  </div>  
 
   <body>
-    <h1>Raspberry Pi LED Control</h1>
-    <form method="post" action="/led">
-      <input type="submit" name="submit" value="On">
-      <input type="submit" name="submit" value="Off">
-    </form>
+  <form>
+    <label for="interval">Enter the new interval (in minutes):</label>
+    <input type="number" id="interval" name="interval" min="1">
+    <button type="submit">Submit</button>
+  </form>
+
   </body>
 </html>
