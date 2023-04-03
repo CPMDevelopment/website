@@ -3,24 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Update Interval</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('form').submit(function(event) {
-        event.preventDefault();
-        const interval = $('#interval').val();
-        $.ajax({
-          type: 'POST',
-          url: 'http://<your_raspberry_pi_ip_address>:5000/update_interval',
-          data: { interval: interval },
-          success: function(data) {
-            console.log(data);
-          },
-          dataType: 'json'
-        });
-      });
-    });
-  </script>
+  <script src="update_interval.js"></script>
 </head>
 <body>
   <h1>Update Image Capture Interval</h1>
