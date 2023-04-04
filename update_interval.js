@@ -4,7 +4,7 @@ $(document).ready(function() {
     const interval = $('#interval').val();
     $.ajax({
       type: 'POST',
-      url: 'http://<your_raspberry_pi_ip_address>:5000/update_interval',
+      url: 'http://192.168.20.11:5000/update_interval',
       data: { interval: interval },
       success: function(data) {
         console.log(data);
