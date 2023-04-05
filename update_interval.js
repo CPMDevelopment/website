@@ -9,7 +9,7 @@ $(document).ready(function() {
       success: function(data) {
         console.log(data);
       },
-      dataType: 'json'
+      dataType: 'json' 
     });
   });
 });
