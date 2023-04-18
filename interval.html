@@ -8,21 +8,9 @@
     body {
       text-align: center;
     }
-    .line {
-      display: flex;
-      justify-content: center;
-    }
-    .line.left {
-      justify-content: space-between;
-    }
-    .line.right {
-      justify-content: flex-end;
-    }
-    .line.center {
-      justify-content: center;
-    }
-    .line.second {
-      margin-top: 1em;
+
+    .align-right {
+      text-align: right;
     }
   </style> 
 </head>
@@ -30,30 +18,70 @@
   <div style="text-align: center;">
     <img src="Global_TL_LOGO.jpg" width="175" alt="My Image" />
   </div>
-  <div class="line left">
-    <label for="interval">Take picture every (minutes):</label>
-    <input type="number" id="interval" name="interval" min="1">
-    <label for="start-time">Start Time:</label>
-    <input type="time" id="start-time" name="start-time">
-    <label for="end-time">End Time:</label>
-    <input type="time" id="end-time" name="end-time">
+  <div style="text-align: center;">
+    <form>
+      <label for="interval">Take picture every (minutes):</label>
+      <input type="number" id="interval" name="interval" min="1">
+      <button type="submit">Submit</button>   
+    </form>
   </div>
-  <div class="line second right">
-    <label for="monday">Monday</label>
-    <input type="checkbox" id="monday" name="monday">
-    <label for="tuesday">Tuesday</label>
-    <input type="checkbox" id="tuesday" name="tuesday">
-    <label for="wednesday">Wednesday</label>
-    <input type="checkbox" id="wednesday" name="wednesday">
-    <label for="thursday">Thursday</label>
-    <input type="checkbox" id="thursday" name="thursday">
-    <label for="friday">Friday</label>
-    <input type="checkbox" id="friday" name="friday">
-    <label for="saturday">Saturday</label>
-    <input type="checkbox" id="saturday" name="saturday">
-    <label for="sunday">Sunday</label>
-    <input type="checkbox" id="sunday" name="sunday">
-    <button type="submit">Submit</button>   
+  <div class="align-right">
+    <form>
+      <label for="monday">Monday</label>
+      <input type="checkbox" id="monday" name="monday">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div style="text-align: center;">
+    <form>
+      <label for="start-time">Start Time:</label>
+      <input type="time" id="start-time" name="start-time">
+      <label for="end-time">End Time:</label>
+      <input type="time" id="end-time" name="end-time">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div class="align-right">
+    <form>
+      <label for="tuesday">Tuesday</label>
+      <input type="checkbox" id="tuesday" name="tuesday">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div class="align-right">
+    <form>
+      <label for="wednesday">Wednesday</label>
+      <input type="checkbox" id="wednesday" name="wednesday">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div class="align-right">
+    <form>
+      <label for="thursday">Thursday</label>
+      <input type="checkbox" id="thursday" name="thursday">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div class="align-right">
+    <form>
+      <label for="friday">Friday</label>
+      <input type="checkbox" id="friday" name="friday">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div class="align-right">
+    <form>
+      <label for="saturday">Saturday</label>
+      <input type="checkbox" id="saturday" name="saturday">
+      <button type="submit">Submit</button>   
+    </form>
+  </div>
+  <div class="align-right">
+    <form>
+      <label for="sunday">Sunday</label>
+      <input type="checkbox" id="sunday" name="sunday">
+      <button type="submit">Submit</button>   
+    </form>
   </div>
 </body>
 </html>
