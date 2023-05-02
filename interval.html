@@ -12,6 +12,7 @@
     h1 {
       margin-top: -3cm; 
       margin-bottom: 2em;
+      color: #B0A226;
     }
     label {
       display: inline-block;  
@@ -29,6 +30,10 @@
     }
     #button{
       text-align: right;
+    }
+    #end-of-day-uploading {
+      margin-top: 8em;
+      color: #B0A226;
     }
   </style> 
 </head>
@@ -62,13 +67,11 @@
     </div> 
     <br><br>
     <button type="submit">Submit</button>   
-    <h1>End of Day Uploading</h1> 
-    <label for="enable">Enable:</label>
-    <input type="checkbox" id="enable" name="enable"><br><br>
-    <label for="start-upload-time">Start Time:</label>
-    <input type="time" id="start-upload-time" name="start-upload-time">
-    <label for="stop-upload-time">Stop Time:</label>
-    <input type="time" id="stop-upload-time" name="stop-upload-time"><br><br>
-    <label for="check-hours">Check for non-uploaded photos in the last:</label>
-    <input type="number" id="check-hours" name="check-hours" min="1"> hours<br><br>
-    <div
+  </form>
+  <h1 id="end-of-day-uploading">End of Day Uploading</h1> 
+  <form>
+    <div id="checkboxes">
+      <label for="enable">Enable</label>
+      <label for="monday1">Monday</label>
+      <input type="checkbox" id="monday1" name="monday1"><br>
+      <label for="tuesday1">Tuesday</label>
