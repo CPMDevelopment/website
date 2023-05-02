@@ -29,9 +29,34 @@
       margin-bottom: 2em;
       color: #B0A226;
     }
+    .menu {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .menu a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
   </style> 
 </head>
 <body>
+  <div class="menu">
+    <a href="#">End of Day Uploading</a>
+    <a href="#">Time Zone</a>
+    <a href="#">Weather Settings</a>
+    <a href="#">Update Capture Interval</a>
+  </div>
   <div style="text-align: left;">
     <img src="Global_TL_LOGO_TP.png" width="175" alt="My Image" />
   </div>
