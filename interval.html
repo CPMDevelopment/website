@@ -24,6 +24,11 @@
       vertical-align: top;
       margin-left: 50px;
     }
+    #uploading {
+      margin-top: 3em;
+      margin-bottom: 2em;
+      color: #B0A226;
+    }
   </style> 
 </head>
 <body>
@@ -57,22 +62,12 @@
     <br><br>
     <button type="submit">Submit</button>   
   </form>
-  <h1> </h1>
-  <h1>End of Day Uploading</h1> 
-  <div id="checkboxes">
-    <label for="enable">Enable</label>
-    <input type="checkbox" id="Enable" name="Enable"><br>
-    <label for="monday1">Monday</label>
-    <input type="checkbox" id="monday1" name="monday1"><br>
-    <label for="tuesday1">Tuesday</label>
-    <input type="checkbox" id="tuesday1" name="tuesday1"><br>
-    <label for="wednesday1">Wednesday</label>
-    <input type="checkbox" id="wednesday1" name="wednesday1"><br>
-    <label for="thursday1">Thursday</label>
-    <input type="checkbox" id="thursday1" name="thursday1"><br>
-    <label for="friday1">Friday
-    <input type="checkbox" id="friday1" name="friday1"><br>
-    <label for="saturay1">Saturday
-    <input type="checkbox" id="saturday1" name="saturday1"><br>
-    <label for="sunday1">Sunday
-    <input type="checkbox" id="sunday1" name="sunday1"><br>
+  <div id="uploading">
+    <h1>End of Day Uploading</h1> 
+    <h1 style="color: #B0A226; margin-top: 0;">Check for non-uploaded photos in the last <input type="number" id="non-uploaded" name="non-uploaded" min="1"> hours</h1>
+    <label for="enable">Enable:</label>
+    <input type="checkbox" id="enable" name="enable"><br>
+    <label for="start-upload">Start Time:</label>
+    <input type="time" id="start-upload" name="start-upload">
+    <label for="end-upload">End Time:</label>
+    <input type="time" id="end-upload" name="end-upload
