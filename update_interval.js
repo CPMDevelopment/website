@@ -23,4 +23,15 @@ $(document).ready(function() {
       dataType: 'json' 
     });
   }); 
+
+  // Fetch the latest image URL and update the image source
+  const apiUrl = "https://example.com/api/latest-image";
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("last-image").src = data.imageUrl;
+    })
+    .catch(error => {
+      console.error("Error fetching latest image:", error);
+    });
 });
