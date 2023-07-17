@@ -18,7 +18,7 @@ $(document).ready(function() {
       url: 'http://192.168.20.11:5000/update_interval',
       data: { interval: interval, startTime: startTime, endTime: endTime, daysOfWeek: daysOfWeek },
       success: function(data) {
-        console.log(data); 
+        console.log(data);  
       },
       dataType: 'json' 
     });
