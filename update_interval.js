@@ -21,7 +21,7 @@ $(document).ready(function() {
         console.log(data);  
       },
       dataType: 'json'   
-    });
+    }); 
   }); 
 
   // Fetch the latest image URL and update the image source
