@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Display</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    <p>Latitude: -37.85400225959142</p>
+    <p>Longitude: 144.98377490742098</p>
+    <p>Temperature: <span id="temperature"></span>°C</p>
+
+    <script>
+        // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+        const apiKey = 'YOUR_API_KEY';
+        const latitude = -37.85400225959142;
+        const longitude = 144.98377490742098;
+
+        // Function to fetch weather data from OpenWeatherMap API
+        async function getWeatherData() {
+            try {
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`);
+                const data = await response.json();
+
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    document.getElementById('temperature').innerText = temperature;
+                } else {
+                    document.getElementById('temperature').innerText = 'Not available';
+                }
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+                document.getElementById('temperature').innerText = 'Error';
+            }
+        }
+
+        // Call the function to get and display weather data
+        getWeatherData();
+    </script>
+</body>
+</html>
