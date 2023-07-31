@@ -8,7 +8,7 @@ $(document).ready(function() {
       monday: $('#monday').is(':checked'),
       tuesday: $('#tuesday').is(':checked'),
       wednesday: $('#wednesday').is(':checked'),
-      thursday: $('#thursday').is(':checked'),
+      thursday: $('#thursday').is(':checked'), 
       friday: $('#friday').is(':checked'),
       saturday: $('#saturday').is(':checked'),
       sunday: $('#sunday').is(':checked')
@@ -21,6 +21,7 @@ $(document).ready(function() {
         console.log(data);    
       },
       dataType: 'json'   
+      url: 
     });  
   });
 
@@ -33,5 +34,5 @@ $(document).ready(function() {
     })  
     .catch(error => {
       console.error("Error fetching latest image:", error);
-    });
+    }); 
 });
