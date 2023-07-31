@@ -21,7 +21,7 @@ $(document).ready(function() {
         console.log(data);    
       },
       dataType: 'json'   
-      url: 
+      
     });  
   });
 
