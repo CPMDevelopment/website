@@ -5,10 +5,10 @@
   <style>
     table {
       border-collapse: collapse;
-      width: 100%
+      width: 100%;
     }
 
-     th, td {
+    th, td {
       border: 1px solid black;
       padding: 8px;
       text-align: center;
@@ -16,6 +16,12 @@
 
     th {
       background-color: #f2f2f2;
+    }
+
+    /* Style for the header row */
+    .header-row th {
+      background-color: black;
+      color: white;
     }
 
     tr:hover {
@@ -26,14 +32,13 @@
       text-decoration: none;
       color: blue;
     }
-
-    </style>
+  </style>
 </head>
 <body>
-  <h1>Controller List</h1>
+  <h1>List of Controllers</h1>
   <table>
-   <tr>
-     <th>Title</th>
+    <tr class="header-row">
+      <th>Title/Name</th>
       <th>Version Running</th>
       <th>Current Installation</th>
       <th>Last Connected</th>
@@ -75,9 +80,4 @@
     });
   </script>
 </body>
-</html>     
-   </tr>      
-  </table>
-</body>
-  
-      
+</html>
