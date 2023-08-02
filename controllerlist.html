@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Controller List</title>
   <style>
-    /* Your CSS styles here */
     body {
       text-align: center;
       background-color: #398F96;
@@ -31,7 +30,9 @@
       color: #009CF0;
     }
     .header {
-      text-align: left;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       margin-top: 60px;
     }
     .header img {
@@ -41,14 +42,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .controller-list {
       margin-top: 20px;
+      width: 80%;
     }
     table {
       border-collapse: collapse;
-      width: 80%;
+      width: 100%;
     }
     th, td {
       border: 1px solid black;
@@ -91,23 +93,23 @@
         <tr>
           <td>GTL_1</td>
           <td>1.0.0</td>
-          <td>CAPITOL</td>
+          <td>KAPITOL</td>
           <td id="lastConnected1"></td>
           <td><a href="details_page.html" target="_blank">Details</a></td>
         </tr>
-        <tr>
           <td>GTL_2</td>
           <td>1.0.0</td>
-          <td>CAPITOL</td>
-          <td id="lastConnected2"></td>
+          <td>KAPITOL</td>
+          <td id="lastConnected1"></td>
           <td><a href="details_page.html" target="_blank">Details</a></td>
+        <tr>
+          <td></td>
         </tr>
-        <!-- Add more rows for other controllers if needed -->
+        <!-- Repeat same to add more controllers -->
       </table>
     </div>
   </div>
-
-  <!-- Link the script.js file -->
+  
   <script src="script.js"></script>
 </body>
 </html>
