@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Controllers</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%
+    }
 
+     th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    </style>
+</head>
+<body>
+  <h1>Controller List</h1>
+  <table>
+   <tr>
+     <th>Title</th>
+      <th>Version Running</th>
+      <th>Current Installation</th>
+      <th>Last Connected</th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <td>GTL_1</td>
+      <td>1.0.0</td>
+      <td>CAPITOL</td>
+      <td id="lastConnected1"></td>
+      <td><a href="details_page.html" target="_blank">Details</a></td>
+    </tr>
+    <tr>
+      <td>GTL_2</td>
+      <td>1.0.0</td>
+      <td>CAPITOL</td>
+      <td id="lastConnected2"></td>
+      <td><a href="details_page.html" target="_blank">Details</a></td>
+    </tr>
+  </table>
+
+  <script>
+    // Function to get the current date and time in a formatted way
+    function getCurrentDateTime() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+
+    // Update the "Last Connected" cells with the current date and time
+    const lastConnectedCells = document.querySelectorAll('#lastConnected1, #lastConnected2');
+    lastConnectedCells.forEach(cell => {
+      cell.textContent = getCurrentDateTime();
+    });
+  </script>
+</body>
+</html>     
+   </tr>      
+  </table>
+</body>
+  
+      
