@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>List of Controllers</title>
+  <meta charset="UTF-8">
+  <title>Controller List</title>
   <style>
+    body {
+      text-align: center;
+      background-color: #398F96;
+      margin: 0;
+    }
+    .menu {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .menu a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .menu a:hover {
+      background-color: #ddd;
+      color: #009CF0;
+    }
+    .header {
+      text-align: left;
+    }
+    .header img {
+      width: 175px;
+    }
+    .controller-list {
+      margin-top: 100px; /* Adjust as per your preference */
+    }
     table {
       border-collapse: collapse;
-      width: 100%;
+      width: 80%;
+      margin: auto;
     }
-
     th, td {
       border: 1px solid black;
       padding: 8px;
       text-align: center;
     }
-
     th {
       background-color: #f2f2f2;
     }
-
-    /* Style for the header row */
-    .header-row th {
-      background-color: black;
-      color: white;
-    }
-
     tr:hover {
       background-color: #f5f5f5;
     }
-
     a {
       text-decoration: none;
       color: blue;
@@ -35,33 +61,45 @@
   </style>
 </head>
 <body>
-  <h1>List of Controllers</h1>
-  <table>
-    <tr class="header-row">
-      <th>Title/Name</th>
-      <th>Version Running</th>
-      <th>Current Installation</th>
-      <th>Last Connected</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td>GTL_1</td>
-      <td>1.0.0</td>
-      <td>CAPITOL</td>
-      <td id="lastConnected1"></td>
-      <td><a href="details_page.html" target="_blank">Details</a></td>
-    </tr>
-    <tr>
-      <td>GTL_2</td>
-      <td>1.0.0</td>
-      <td>CAPITOL</td>
-      <td id="lastConnected2"></td>
-      <td><a href="details_page.html" target="_blank">Details</a></td>
-    </tr>
-  </table>
+  <div class="menu">
+    <a href="#">End of Day Uploading</a>
+    <a href="#">Time Zone</a>
+    <a href="#">Weather Settings</a>
+    <a href="#">Update Capture Interval</a>
+  </div>
+  <div class="header">
+    <img src="Global_TL_LOGO_TP.png" alt="My Image" />
+  </div>
+  <div class="controller-list">
+    <h1>Controller List</h1>
+    <table>
+      <tr>
+        <th>Title/Name</th>
+        <th>Version Running</th>
+        <th>Current Installation</th>
+        <th>Last Connected</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>GTL_1</td>
+        <td>1.0.0</td>
+        <td>CAPITOL</td>
+        <td id="lastConnected1"></td>
+        <td><a href="details_page.html" target="_blank">Details</a></td>
+      </tr>
+      <tr>
+        <td>GTL_2</td>
+        <td>1.0.0</td>
+        <td>CAPITOL</td>
+        <td id="lastConnected2"></td>
+        <td><a href="details_page.html" target="_blank">Details</a></td>
+      </tr>
+      <!-- Add more rows for other controllers if needed -->
+    </table>
+  </div>
 
+  <!-- JavaScript for getting the current date and time and updating "Last Connected" cells -->
   <script>
-    // Function to get the current date and time in a formatted way
     function getCurrentDateTime() {
       const now = new Date();
       const year = now.getFullYear();
@@ -73,7 +111,6 @@
       return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
     }
 
-    // Update the "Last Connected" cells with the current date and time
     const lastConnectedCells = document.querySelectorAll('#lastConnected1, #lastConnected2');
     lastConnectedCells.forEach(cell => {
       cell.textContent = getCurrentDateTime();
