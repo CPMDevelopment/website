@@ -12,12 +12,8 @@ function getCurrentDateTime() {
 
 // Sample data for the controller list
 const controllers = [
-  { title: "GTL_1", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
-  { title: "GTL_2", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
-  // Add more controllers here
-  { title: "GTL_3", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
-  { title: "GTL_4", version: "2.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
-  { title: "GTL_5", version: "1.2.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
+  { title: "GTL_1", version: "1.0.0", installation: "KAPITOL UNIT#1", lastConnected: getCurrentDateTime() },
+  { title: "GTL_2", version: "1.0.0", installation: "KANG UNIT#2", lastConnected: getCurrentDateTime() },
 ];
 
 // Function to populate the table with controller data
