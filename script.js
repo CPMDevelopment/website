@@ -1,11 +1,30 @@
 // JavaScript code for the search functionality and pagination
 
-// Sample data for the controller list (replace with your actual data)
+// Function to get the current date and time in the format "YYYY-MM-DD HH:MM:SS"
+function getCurrentDateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+// Sample data for the controller list
 const controllers = [
-  { title: "GTL_1", version: "1.0.0", installation: "KAPITOL", lastConnected: "2023-08-02 12:34:56" },
-  { title: "GTL_2", version: "1.0.0", installation: "KAPITOL", lastConnected: "2023-08-02 13:45:23" },
-  // Add more controllers here
+  { title: "GTL_1", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
+  { title: "GTL_2", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
 ];
+
+// Function to populate the table with controller data
+function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
+  // ... Rest of the function remains unchanged ...
+}
+
+// Rest of the script...
+
 
 // Function to populate the table with controller data
 function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
