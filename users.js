@@ -10,6 +10,36 @@ function getCurrentDateTime() {
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
 
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'your_mysql_host',
+  user: 'your_mysql_username',
+  password: 'your_mysql_password',
+  database: 'your_database_name',
+});
+
+// Function to add a new user to the database
+function addUser(firstName, lastName, username, company, callback) {
+  const query = 'INSERT INTO users (first_name, last_name, username, company) VALUES (?, ?, ?, ?)';
+  connection.query(query, [firstName, lastName, username, company], (error, results) => {
+    if (error) {
+      callback(error, null);
+    } else {
+      callback(null, results.insertId);
+    }
+  });
+}
+
+// Example usage of the addUser function
+addUser('John', 'Doe', 'johndoe', 'Example Company', (error, userId) => {
+  if (error) {
+    console.error('Error adding user:', error);
+  } else {
+    console.log('User added with ID:', userId);
+  }
+});
+
+
 // Sample data for the users list
 const users = [
   { firstName: "", lastName: "", username: "2c_duncanm2c", company: "" },
