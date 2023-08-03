@@ -12,10 +12,14 @@ function getCurrentDateTime() {
 
 // Sample data for the users list
 const users = [
-  { firstName: "John", lastName: "Doe", username: "johnd", company: "ABC Corp" },
-  { firstName: "Jane", lastName: "Smith", username: "janes", company: "XYZ Inc" },
+  { firstName: "", lastName: "", username: "2c_duncanm2c", company: "" },
+  { firstName: "", lastName: "", username: "2c_garrys2c", company: "" },
   // Add more users here
 ];
+
+function addUser() {
+  alert("Add Users functionality is not implemented in this demo.");
+}
 
 // Function to populate the table with user data
 function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
