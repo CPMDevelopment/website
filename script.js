@@ -1,5 +1,3 @@
-// JavaScript code for the search functionality and pagination
-
 // Function to get the current date and time in the format "YYYY-MM-DD HH:MM:SS"
 function getCurrentDateTime() {
   const now = new Date();
@@ -16,15 +14,11 @@ function getCurrentDateTime() {
 const controllers = [
   { title: "GTL_1", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
   { title: "GTL_2", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
+  // Add more controllers here
+  { title: "GTL_3", version: "1.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
+  { title: "GTL_4", version: "2.0.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
+  { title: "GTL_5", version: "1.2.0", installation: "KAPITOL", lastConnected: getCurrentDateTime() },
 ];
-
-// Function to populate the table with controller data
-function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
-  // ... Rest of the function remains unchanged ...
-}
-
-// Rest of the script...
-
 
 // Function to populate the table with controller data
 function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
@@ -108,4 +102,11 @@ function goToPage(page) {
 
 // Function to handle the search input
 function filterControllers() {
-  const searchInput = document.getElementById("
+  const searchInput = document.getElementById("search");
+  populateTable(1, 5, searchInput.value);
+}
+
+// Call the populateTable function when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  populateTable();
+});
