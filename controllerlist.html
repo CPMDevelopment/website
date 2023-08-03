@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Controller List</title>
   <style>
+    /* Your CSS styles here */
     body {
       text-align: center;
       background-color: #398F96;
@@ -47,6 +48,7 @@
     .controller-list {
       margin-top: 20px;
       width: 80%;
+      text-align: center;
     }
     table {
       border-collapse: collapse;
@@ -67,6 +69,14 @@
       text-decoration: none;
       color: blue;
     }
+    .pagination {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .search {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -80,9 +90,14 @@
     <div class="header">
       <img src="Global_TL_LOGO_TP.png" alt="My Image" />
     </div>
+    <div class="search">
+      <label for="search">Search: </label>
+      <input type="text" id="search" oninput="filterControllers()" />
+    </div>
     <div class="controller-list">
       <h1>Controller List</h1>
-      <table>
+      <table id="controllerTable">
+        <!-- Table rows will be added dynamically using JavaScript -->
         <tr>
           <th>Title/Name</th>
           <th>Version Running</th>
@@ -90,23 +105,11 @@
           <th>Last Connected</th>
           <th>Actions</th>
         </tr>
-        <tr>
-          <td>GTL_1</td>
-          <td>1.0.0</td>
-          <td>KAPITOL</td>
-          <td id="lastConnected1"></td>
-          <td><a href="details_page.html" target="_blank">Details</a></td>
-        </tr>
-          <td>GTL_2</td>
-          <td>1.0.0</td>
-          <td>KAPITOL</td>
-          <td id="lastConnected1"></td>
-          <td><a href="details_page.html" target="_blank">Details</a></td>
-        <!-- Repeat same to add more controllers -->
       </table>
+      <div class="pagination" id="pagination"></div>
     </div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
