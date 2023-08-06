@@ -20,10 +20,10 @@ $(document).ready(function() {
       success: function(data) {
         console.log(data);    
       },
-      dataType: 'json'   
+      dataType: 'json' 
       
     });  
-  });
+  });  
 
   // Fetch the latest image URL and update the image source
   const apiUrl = "https://example.com/api/latest-image"; 
@@ -31,6 +31,10 @@ $(document).ready(function() {
     .then(response => response.json())  
     .then(data => { 
       document.getElementById("last-image").src = data.imageUrl;
+
+      if apiUrl{
+        
+      }
     })  
     .catch(error => {
       console.error("Error fetching latest image:", error);
