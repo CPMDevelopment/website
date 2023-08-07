@@ -1,14 +1,12 @@
-// Replace 'YOUR_ACCESS_TOKEN' with the actual access token obtained from the OneDrive API
 const accessToken = 'YOUR_ACCESS_TOKEN';
-const folderId = 'YOUR_FOLDER_ID'; // Replace with the specific OneDrive folder ID
+const folderId = 'FOLDER_ID'; // Replace 'FOLDER_ID' with the specific OneDrive folder ID
 
 const galleryContainer = document.getElementById('galleryContainer');
 
-// Function to fetch the latest image from the specified OneDrive folder
 async function fetchLatestImage() {
   try {
     const response = await fetch(
-      `https://graph.microsoft.com/v1.0/me/drive/items/${folderId}/children?select=id,name,webUrl,lastModifiedDateTime&orderby=lastModifiedDateTime desc&top=1`,
+      `https://graph.microsoft.com/v1.0/me/drive/items/${folderId}/children?$orderby=lastModifiedDateTime desc&$top=1`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -23,11 +21,10 @@ async function fetchLatestImage() {
     const data = await response.json();
     if (data.value && data.value.length > 0) {
       const latestImage = data.value[0];
-      const imageUrl = latestImage.webUrl;
+      const imageUrl = latestImage['@microsoft.graph.downloadUrl'];
       const imageFileName = latestImage.name;
       const imageModifiedTime = new Date(latestImage.lastModifiedDateTime).toLocaleString();
 
-      // Create a new image element and append it to the gallery container
       const imageElement = document.createElement('img');
       imageElement.src = imageUrl;
       imageElement.alt = imageFileName;
@@ -46,5 +43,4 @@ async function fetchLatestImage() {
   }
 }
 
-// Call the function to fetch the latest image when the page loads
 fetchLatestImage();
