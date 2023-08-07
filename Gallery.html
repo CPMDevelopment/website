@@ -51,6 +51,7 @@
       margin: 20px;
     }
     .folder-icon {
+      position: relative;
       width: 150px;
       height: 150px;
       border-radius: 10px;
@@ -63,8 +64,17 @@
       object-fit: cover;
     }
     .folder-name {
-      margin-top: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
       font-weight: bold;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+      margin: 0;
     }
   </style>
 </head>
@@ -96,15 +106,42 @@
       </a>
     </div>
     <!-- Add more folders as needed -->
-    <!-- <div class="folder">
-      <a href="folder3.html">
-        <div class="folder-icon">
-          <img src="folder3-image-placeholder.png" alt="Folder 3" />
-        </div>
-        <div class="folder-name">Folder 3</div>
+    <div class="folder">
+      <a href="#">
+        <div class="folder-icon"></div>
+        <div class="folder-name">Empty Folder</div>
       </a>
     </div>
-    ... -->
+    <div class="folder">
+      <a href="#">
+        <div class="folder-icon"></div>
+        <div class="folder-name">Empty Folder</div>
+      </a>
+    </div>
+    <div class="folder">
+      <a href="#">
+        <div class="folder-icon"></div>
+        <div class="folder-name">Empty Folder</div>
+      </a>
+    </div>
+    <div class="folder">
+      <a href="#">
+        <div class="folder-icon"></div>
+        <div class="folder-name">Empty Folder</div>
+      </a>
+    </div>
+    <div class="folder">
+      <a href="#">
+        <div class="folder-icon"></div>
+        <div class="folder-name">Empty Folder</div>
+      </a>
+    </div>
+    <div class="folder">
+      <a href="#">
+        <div class="folder-icon"></div>
+        <div class="folder-name">Empty Folder</div>
+      </a>
+    </div>
   </div>
 </body>
 </html>
