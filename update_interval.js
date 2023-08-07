@@ -31,10 +31,6 @@ $(document).ready(function() {
     .then(response => response.json())  
     .then(data => { 
       document.getElementById("last-image").src = data.imageUrl;
-
-      if apiUrl{
-        
-      }
     })  
     .catch(error => {
       console.error("Error fetching latest image:", error);
