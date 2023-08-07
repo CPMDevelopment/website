@@ -91,9 +91,6 @@ function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
   renderPagination(filteredUsers.length, page, itemsPerPage);
 }
 
-// Function to render pagination
-// ... (Same as in the previous script.js) ...
-
 // Function to handle the search input
 function filterUsers() {
   const searchInput = document.getElementById("userSearch");
