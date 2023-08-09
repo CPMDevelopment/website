@@ -116,25 +116,7 @@
         </tr>
         <tr>
           <th>Last Connected:</th>
-          <td>Date & Time Now</td>
-        </tr>
-        <tr>
-          <th>Replacement for Controller:</th>
-          <td class="dropdown-container">
-            <select>
-              <option>Kapitol Unit#1</option>
-              <option>Kang Unit#2</option>
-            </select>
-            <button>Change Replacement Target</button>
-          </td>
-        </tr>
-        <tr>
-          <th>IMEI/ESN Number:</th>
-          <td><input type="text" placeholder="<Create new Installation>"></td>
-        </tr>
-        <tr>
-          <th>Deploy URL:</th>
-          <td><input type="text"></td>
+          <td><span id="currentDateTime"></span></td>
         </tr>
       </table>
     </div>
@@ -142,5 +124,22 @@
       <button>Apply</button>
     </div>
   </div>
+  <script>
+    function getCurrentDateTime() {
+      const now = new Date();
+      const options = { year: '2-digit', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+      return now.toLocaleString(undefined, options);
+    }
+
+    function updateCurrentDateTime() {
+      const currentDateTimeElement = document.getElementById('currentDateTime');
+      if (currentDateTimeElement) {
+        currentDateTimeElement.textContent = getCurrentDateTime();
+      }
+    }
+
+    updateCurrentDateTime();
+    setInterval(updateCurrentDateTime, 1000);
+  </script>
 </body>
 </html>
