@@ -27,7 +27,7 @@ async function fetchLatestImage() {
 
       const imageElement = document.createElement('img');
       imageElement.src = imageUrl;
-      imageElement.alt = imageFileName;
+      imageElement.alt = imageFileName; 
 
       const imageInfoElement = document.createElement('p');
       imageInfoElement.textContent = `Name: ${imageFileName}, Last Modified: ${imageModifiedTime}`;
