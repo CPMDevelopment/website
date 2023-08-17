@@ -1,5 +1,5 @@
-const accessToken = 'YOUR_ACCESS_TOKEN';
-const folderId = 'FOLDER_ID'; // Replace 'FOLDER_ID' with the specific OneDrive folder ID
+const accessToken = 'Insseerrtt-access-token-hereeee';
+const folderId = 'put-the-folder-id-for-the-one-drive-folder-which-is-being-referred'; 
 
 const galleryContainer = document.getElementById('galleryContainer');
 
@@ -40,4 +40,7 @@ async function fetchLatestImage() {
     console.error('Error fetching data:', error);
     galleryContainer.textContent = 'Error fetching data from OneDrive.';
   }
+
+  
+  
 fetchLatestImage();
