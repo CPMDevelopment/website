@@ -23,8 +23,7 @@ async function fetchLatestImage() {
       const latestImage = data.value[0];
       const imageUrl = latestImage['@microsoft.graph.downloadUrl'];
       const imageFileName = latestImage.name;
-      const imageModifiedTime = new Date(latestImage.lastModifiedDateTime).toLocaleString();
-
+      const imageModifiedTime = new Date(latestImage.lastModifiedDateTime).toLocaleString(); 
       const imageElement = document.createElement('img');
       imageElement.src = imageUrl;
       imageElement.alt = imageFileName; 
@@ -41,6 +40,4 @@ async function fetchLatestImage() {
     console.error('Error fetching data:', error);
     galleryContainer.textContent = 'Error fetching data from OneDrive.';
   }
-}
-
 fetchLatestImage();
