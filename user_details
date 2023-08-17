@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Details</title>
+  <style>
+    /* Your CSS styles here */
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="#">End of Day Uploading</a>
+    <a href="#">Time Zone</a>
+    <a href="#">Weather Settings</a>
+    <a href="#">Update Capture Interval</a>
+  </div>
+  <div class="header">
+    <img src="Global_TL_LOGO_TP.png" alt="My Image" />
+  </div>
+  <div class="container">
+    <h1>User Details</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="givenName">Given Name:</label>
+      <input type="text" id="givenName" name="givenName"><br><br>
+      <label for="familyName">Family Name:</label>
+      <input type="text" id="familyName" name="familyName"><br><br>
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName"><br><br>
+      <label for="timezone">Timezone:</label>
+      <select id="timezone" name="timezone">
+        <option value="AEDT">AEDT</option>
+        <!-- Other timezone options -->
+      </select><br><br>
+      <label for="organization">Organisation:</label>
+      <input type="text" id="organization" name="organization"><br><br>
+      <div class="button-container">
+        <button type="submit">Save Changes</button>
+        <button>Delete User</button>
+        <button>Change Password</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
