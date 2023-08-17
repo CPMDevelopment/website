@@ -85,7 +85,7 @@ function populateTable(page = 1, itemsPerPage = 5, searchTerm = "") {
         </tr>
       `
       )
-      .join("")}
+      .join("")} 
   `;
 
   renderPagination(filteredUsers.length, page, itemsPerPage);
