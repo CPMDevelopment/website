@@ -4,7 +4,72 @@
   <meta charset="UTF-8">
   <title>Enlarged Gallery</title>
   <style>
-    /* Your CSS styles here */
+    body {
+      text-align: center;
+      background-color: #398F96;
+      margin: 0;
+    }
+    .menu {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .menu a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .menu a:hover {
+      background-color: #ddd;
+      color: #009CF0;
+    }
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 60px;
+    }
+    .header img {
+      width: 175px;
+    }
+    .enlarged-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+      padding: 20px;
+    }
+    .enlarged-image {
+      flex: 1;
+      margin-right: 20px;
+    }
+    .enlarged-image img {
+      width: 100%;
+      height: auto;
+      border: 4px solid black;
+      border-radius: 10px;
+    }
+    .previous-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .previous-image {
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .previous-image img {
+      width: 100%;
+      height: auto;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -17,10 +82,27 @@
   <div class="header">
     <img src="Global_TL_LOGO_TP.png" alt="My Image" />
   </div>
-  <div class="enlarged-image-container">
-    <img id="enlarged-image" src="#" alt="Enlarged Image">
-    <!-- Add icons of previous images here -->
+  <div class="enlarged-container">
+    <div class="enlarged-image">
+      <img id="enlarged-image" src="#" alt="Enlarged Image">
+    </div>
+    <div class="previous-images">
+      <div class="previous-image">
+        <img src="previous_image_1.jpg" alt="Previous Image 1">
+      </div>
+      <div class="previous-image">
+        <img src="previous_image_2.jpg" alt="Previous Image 2">
+      </div>
+      <div class="previous-image">
+        <img src="previous_image_3.jpg" alt="Previous Image 3">
+      </div>
+      <div class="previous-image">
+        <img src="previous_image_4.jpg" alt="Previous Image 4">
+      </div>
+      <div class="previous-image">
+        <img src="previous_image_5.jpg" alt="Previous Image 5">
+      </div>
+    </div>
   </div>
-  <!-- Your JavaScript to fetch and display images here -->
 </body>
 </html>
