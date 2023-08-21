@@ -34,6 +34,8 @@ async function fetchLatestImage() {
 
       galleryContainer.appendChild(imageElement);
       galleryContainer.appendChild(imageInfoElement);
+      
+      
     } else {
       galleryContainer.textContent = 'No images found in the specified folder.';
     }
@@ -44,7 +46,8 @@ async function fetchLatestImage() {
 imageElement.addEventListener('click', function () {
   const imageUrl = this.src;
   window.location.href = `enlarged_gallery.html?image=${encodeURIComponent(imageUrl)}`;
-});
+  
+}); 
   
   
 fetchLatestImage();
