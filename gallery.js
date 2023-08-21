@@ -1,5 +1,7 @@
-const accessToken = 'Insseerrtt-access-token-hereeee';
-const folderId = 'put-the-folder-id-for-the-one-drive-folder-which-is-being-referred'; 
+/*const accessToken = 'Insseerrtt-access-token-hereeee';*/
+const accessToken = ''
+/* const folderId = 'put-the-folder-id-for-the-one-drive-folder-which-is-being-referred'; */
+const folderId = 'https://capturepointmedia-my.sharepoint.com/personal/max_capturepointmedia_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmax%5Fcapturepointmedia%5Fonmicrosoft%5Fcom%2FDocuments%2FGTL%5FCAMERAS%2FKANG%2DUNIT%232&view=0'
 
 const galleryContainer = document.getElementById('galleryContainer');
 
