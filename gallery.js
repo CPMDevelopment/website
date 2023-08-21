@@ -4,7 +4,6 @@ const accessToken = ''
 const folderId = 'https://capturepointmedia-my.sharepoint.com/personal/max_capturepointmedia_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmax%5Fcapturepointmedia%5Fonmicrosoft%5Fcom%2FDocuments%2FGTL%5FCAMERAS%2FKANG%2DUNIT%232&view=0'
 
 const galleryContainer = document.getElementById('galleryContainer');
-
 async function fetchLatestImage() {
   try {
     const response = await fetch(
