@@ -41,7 +41,10 @@ async function fetchLatestImage() {
     console.error('Error fetching data:', error);
     galleryContainer.textContent = 'Error fetching data from OneDrive.';
   }
-
+imageElement.addEventListener('click', function () {
+  const imageUrl = this.src;
+  window.location.href = `enlarged_gallery.html?image=${encodeURIComponent(imageUrl)}`;
+});
   
   
 fetchLatestImage();
