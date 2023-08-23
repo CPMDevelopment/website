@@ -3,16 +3,27 @@ $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault();
-    // ... Your existing form data extraction ...
+    const interval = $('#interval').val();
+    const startTime = $('#start-time').val();
+    const endTime = $('#end-time').val();
+    const daysOfWeek = {
+      monday: $('#monday').is(':checked'),
+      tuesday: $('#tuesday').is(':checked'),
+      wednesday: $('#wednesday').is(':checked'),
+      thursday: $('#thursday').is(':checked'),
+      friday: $('#friday').is(':checked'),
+      saturday: $('#saturday').is(':checked'),
+      sunday: $('#sunday').is(':checked')
+    };
 
     $.ajax({
       type: 'POST',
-      url: 'http://192.168.20.11:5000/update_interval', // Flask app URL
+      url: 'http://192.168.20.11:5000/update_interval',
       data: { interval: interval, startTime: startTime, endTime: endTime, daysOfWeek: daysOfWeek },
       success: function(data) {
-        console.log(data);    
+        console.log(data);
       },
-      dataType: 'json' 
+      dataType: 'json'
     });
   });
 
@@ -21,11 +32,11 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: 'http://192.168.20.11:5000/capture', // Flask app URL
+      url: 'http://192.168.20.11:5000/capture',
       success: function(data) {
         console.log(data);
       },
-      dataType: 'json' 
+      dataType: 'json'
     });
   });
 });
