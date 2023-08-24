@@ -27,6 +27,23 @@ $(document).ready(function() {
     });
   });
 
+  function fetchAndUpdateVoltage() {
+    $.ajax({
+      type: 'GET', 
+      url: 'http://192.168.20.11:5000/get_voltage',
+      success: function(data) {
+        // Update the voltage value in the HTML
+        $('#voltage-value').text('Voltage: ' + data.voltage + ' V');
+      },
+      dataType: 'json'
+    });
+  }
+
+  fetchAndUpdateVoltage();
+  setInterval(fetchAndUpdateVoltage, 5000); // Fetch every 5 seconds
+});
+
+
   $('#capture-button').click(function(event) {
     event.preventDefault();
 
